@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+:root {
+    --glass: rgba(255, 255, 255, 0.2);
+    --glass-med: rgba(100, 100, 100, 0.2);
+    --glass-dark: rgba(30, 30, 30, 0.2);
+    --shadow: var(--light);
+    --lightest: rgb(175, 175, 175);
+    --light: rgb(100, 100, 100);
+    --medium: rgb(50, 50, 50);
+    --darkesty: rgb(30, 30, 30);
+    --deep: black;
+    --accentblue: dodgerblue;
+    --accentred: crimson;
+}
+
+@keyframes background-anim {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes background-hueshift {
+    from {
+        backdrop-filter: hue-rotate(0deg)
+    }
+
+    to {
+        backdrop-filter: hue-rotate(360deg)
+    }
+}
+
+html {
+    background-color: var(--deep);
+}
+
+body {
+    position: relative;
+    /* background-color: var(--deep); */
+    background-image: radial-gradient(var(--accentred) 1px, var(--deep) 1px);
+    background-size: 40px 40px;
+    animation: background-anim 30s linear infinite;
+    margin: 0;
+}
+
+.section {
+    animation: background-hueshift 10s linear infinite;
+}
