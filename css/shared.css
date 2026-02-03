@@ -41,12 +41,12 @@ html {
 body {
     position: relative;
     /* background-color: var(--deep); */
-    background-image: radial-gradient(var(--accentred) 1px, var(--deep) 1px);
+    background-image: radial-gradient(var(--lightest) 1px, var(--deep) 1px);
     background-size: 40px 40px;
-    animation: background-anim 30s linear infinite;
+    animation: background-anim 60s linear infinite;
     margin: 0;
 }
 
-.section {
+/* .section {
     animation: background-hueshift 10s linear infinite;
-}
+} */

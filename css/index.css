@@ -13,7 +13,7 @@
     --accentblue: dodgerblue;
     --accentred: crimson;
 
-    --bluramount: 1px;
+    --bluramount: 3px;
 
     --borderthickness: 1px;
 }
@@ -27,6 +27,11 @@ h1 {
 
 h2 {
     color: var(--accentblue);
+    text-align: center;
+}
+
+h3 {
+    color: var(--lightest);
     text-align: center;
 }
 
@@ -51,6 +56,7 @@ hr {
     text-align: center;
     font-size: 100px;
     color: var(--accentred);
+    text-shadow: 0 0 10px var(--accentred);
 }
 
 .homeTitle h2 {
@@ -84,12 +90,12 @@ hr {
     clear: both;
 }
 
-.card:nth-of-type(odd) {
+.card:nth-of-type(even) {
     float: left;
     clear: both;
 }
 
-.card:nth-of-type(even) {
+.card:nth-of-type(odd) {
     float: right;
     clear: both;
 }
@@ -99,6 +105,19 @@ hr {
     padding: 0 15px 15px;
 }
 
+.card:hover hr,
+.wideblock:hover hr {
+    background-color: var(--accentblue);
+    box-shadow: 0 0 10px 0px var(--accentblue);
+
+}
+
+.card:hover,
+.wideblock:hover {
+    border-color: var(--accentblue);
+    box-shadow: 0 0 10px 0px var(--accentblue);
+}
+
 .card img,
 .wideblock img {
     display: block;
@@ -106,7 +125,10 @@ hr {
     height: 200px;
     margin: auto;
     padding-top: 15px;
-    border-radius: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
 }
 
 .wideblock {
