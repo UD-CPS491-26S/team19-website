@@ -21,29 +21,117 @@
         <h1>Our Client</h1>
         <div class="wideblock">
             <img src="assets/uspaper.png" alt="US Paper logo" onerror="this.src='assets/silhouette.png'">
-            <h2>US Paper</h2>
+            <h2>US Paper Corporation</h2>
             <hr />
             <p>
-                Info about our client here
+                US Paper Corp is a family-owned and operated distributor serving businesses throughout the Tampa Bay
+                area. They supply everyday essentials businesses rely on to operate efficiently — from paper products
+                and
+                disposables to janitorial supplies, cleaning chemicals, and takeout containers.
+            </p>
+            <p>
+                As a local distributor, they focus on reliability, responsiveness, and service. US Paper Corp. works
+                directly with their
+                customers, makes decisions quickly, and takes a practical, straightforward approach to distribution.
+                Whether supporting day-to-day orders or higher-volume needs, they approach every customer relationship
+                with the same level of care and accountability. Their goal is simple: provide the right products,
+                deliver
+                when promised, and make doing business easy.
             </p>
         </div>
     </div>
     <br />
     <div class="section" class="tech">
         <h1 style="text-align: right;">Our Technology</h1>
-        <div class="wideblock">
+        <!-- <div class="wideblock">
             <h2>Tech Stack</h2>
             <hr />
             <p>Our technology information here</p>
+        </div> -->
+        <div class="card">
+            <img src="assets/twenty.png" alt="Twenty logo" onerror="this.src='assets/silhouette.png'">
+            <h2>Twenty CRM</h2>
+            <hr>
+            <p>
+                Twenty is a modern, open-source CRM designed as a customizable, self-hostable alternative to traditional
+                platforms like Salesforce, allowing companies to own their data. It offers a clean user interface,
+                pipeline management, and workflow automation. Built with a modern tech stack, it is highly extensible
+                for developers and startups.
+            </p>
+            <p>
+                After assessing different open-source CRM options to build out for our client, we determined that Twenty
+                was an ideal candidate. Being able to integrate the CRM with outside tools, the ability to self-host,
+                and the sleek design made Twenty stand out as a modern solution to our task.
+            </p>
+        </div>
+        <div class="card">
+            <img src="assets/docker.png" alt="Docker logo" style="object-fit: contain; border-radius: 0;"
+                onerror="this.src='assets/silhouette.png'">
+            <h2>Docker</h2>
+            <hr>
+            <p>
+                Docker is an open-source platform used for developing, shipping, and running applications in isolated
+                environments called containers. It packages an application with all its dependencies, ensuring it runs
+                consistently regardless of the underlying infrastructure.
+            </p>
+            <p>
+                By using Docker and Docker Compose to deploy Twenty, we are able to be sure that the CRM stays up to
+                date with the latest bug fixes as well as being easy to stand up on our VPS. After trying to install
+                Twenty from both the source files and from the Docker Compose, we found the process for deploying Twenty
+                to be much more streamlined using Docker.
+            </p>
+        </div>
+        <div class="card">
+            <img src="assets/digitalocean.png" alt="DigitalOcean logo" onerror="this.src='assets/silhouette.png'">
+            <h2>DigitalOcean</h2>
+            <hr>
+            <p>
+                DigitalOcean is a prominent cloud infrastructure provider, widely known for its developer-friendly,
+                high-performance Virtual Private Servers (VPS), which the company brands as Droplets. Founded in 2012,
+                DigitalOcean specializes in providing simple, scalable, and affordable cloud hosting solutions for
+                startups, small-to-medium businesses (SMBs), and developers, offering both shared and dedicated CPU
+                options.
+            </p>
+            <p>
+                DigitalOcean provided a low-cost and reliable option for our VPS needs. We were able to choose the
+                specifications for the Droplet including the memory size, storage capacity, and base image. Our Droplet
+                uses an Ubuntu Linux image with Docker preinstalled. To access the Droplet, we are able use the Secure
+                Shell Protocol (SSH) to connect and the Secure Copy Protocol (SCP) to transfer files. After using SSH to
+                access the Droplet, we can install Twenty, Nginx, and more to build out the CRM for our client.
+            </p>
+        </div>
+        <div class="card">
+            <img src="assets/cloudflare.png" alt="Cloudflare logo" style="object-fit: contain; border-radius: 0;"
+                onerror="this.src='assets/silhouette.png'">
+            <h2>Cloudflare</h2>
+            <hr>
+            <p>
+                Cloudflare info here
+            </p>
+        </div>
+        <div class="card">
+            <img src="assets/nginx.png" alt="Nginx logo" style="object-fit: contain; border-radius: 0;"
+                onerror="this.src='assets/silhouette.png'">
+            <h2>Nginx</h2>
+            <hr>
+            <p>
+                Nginx info here
+            </p>
         </div>
     </div>
     <br />
     <div class="section" class="sprints">
         <h1>Scrum</h1>
         <div class="wideblock">
-            <h2>Sprint 1</h2>
+            <h2>Month 1</h2>
             <hr />
-            <p>Sprint 1 info content</p>
+            <p>Month 1 info content</p>
+        </div>
+        <br />
+        <div class="wideblock">
+            <h2>Month 2</h2>
+            <hr />
+            <p>Month 2 info content</p>
         </div>
     </div>
     <br />
@@ -55,18 +143,16 @@
             <hr />
             <p>
                 I am a Computer Science student at the University of Dayton with a concentration in Cyber Defense.
-                I find cybersecurity and secure systems particularly interesting, especially in environments where 
-                reliability and security are critical. I also have experience working with Position, Navigation, and 
-                Timing (PNT) operating systems used on military aircraft, as well as working with sensor technologies. 
+                I find cybersecurity and secure systems particularly interesting, especially in environments where
+                reliability and security are critical. I also have experience working with Position, Navigation, and
+                Timing (PNT) operating systems used on military aircraft, as well as working with sensor technologies.
             </p>
             <p>
-                Through my coursework and hands-on experience, I have developed skills in programming, networking, and 
-                security principles that help support secure and dependable systems. This capstone project allows me to 
+                Through my coursework and hands-on experience, I have developed skills in programming, networking, and
+                security principles that help support secure and dependable systems. This capstone project allows me to
                 apply what I have learned while exploring real-world challenges in computing and cybersecurity.
             </p>
         </div>
-        <br />
-        <br />
         <div class="card">
             <img src="assets/thomas.jpeg" alt="Thomas" onerror="this.src='assets/silhouette.png'">
             <h2>Thomas McGinley</h2>
@@ -83,26 +169,20 @@
                 life.
             </p>
         </div>
-        <br />
-        <br />
         <div class="card">
-            <img src="assets/abigail.jpeg" alt="Abigail" onerror="this.src='assets/silhouette.png'">
+            <img src="assets/abigail.jpg" alt="Abigail" onerror="this.src='assets/silhouette.png'">
             <h2>Abigail O'Rourke</h2>
             <h3>Computer Science '26</h3>
             <hr />
             <p>
-                I'm an undergraduate student at the University of Dayton studying computer science. I enjoy programming and
-                specialize in Java and Python. I have had the opportunity to work on several company-based projects through 
-                Flyer Consulting and internships. These have included experience working with website development, 
+                I'm an undergraduate student at the University of Dayton studying computer science. I enjoy programming
+                and
+                specialize in Java and Python. I have had the opportunity to work on several company-based projects
+                through
+                Flyer Consulting and internships. These have included experience working with website development,
                 CRM implementation, and GitHub Actions.
             </p>
         </div>
     </div>
-    <br />
-    <br />
-
-
-
-
 
 </body>
