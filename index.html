@@ -7,6 +7,7 @@
 
     <link href="css/shared.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
+    <link rel="icon" href="assets/udayton.webp" />
 </head>
 
 <body>
@@ -106,16 +107,30 @@
             <h2>Cloudflare</h2>
             <hr>
             <p>
-                Cloudflare info here
+                Cloudflare DNS is a blazing-fast, secure, and authoritative DNS service designed for high performance
+                and reliability. It boasts one of the fastest propagation speeds in the industry, utilizing a global
+                Anycast network to reduce latency, combined with built-in DDoS protection, DNSSEC, and CNAME flattening.
+            </p>
+            <p>
+                We decided to use Cloudflare to purchase a domain name and handle DNS due to its reliability and
+                security benefits. Cloudflare helps block out malicious traffic to our VPS and provides us with many
+                tools to fine tune our networking needs.
             </p>
         </div>
         <div class="card">
-            <img src="assets/nginx.png" alt="Nginx logo" style="object-fit: contain; border-radius: 0;"
+            <img src="assets/nginx.png" alt="NGINX logo" style="object-fit: contain; border-radius: 0;"
                 onerror="this.src='assets/silhouette.png'">
-            <h2>Nginx</h2>
+            <h2>NGINX</h2>
             <hr>
             <p>
-                Nginx info here
+                Our NGINX reverse proxy acts as an intermediary server that sits in front of backend web servers,
+                intercepting client requests and forwarding them to the appropriate server. It then receives the
+                response from the backend server and delivers it to the client, abstracting the backend infrastructure
+                from direct client access.
+            </p>
+            <p>
+                We also use certbot for generating certificates used for HTTPS, allowing our application to remain even
+                more secure.
             </p>
         </div>
     </div>
