@@ -41,6 +41,18 @@ hr {
     border: none;
 }
 
+summary {
+    color: var(--lightest);
+    text-align: center;
+    display: block;
+    padding: 10px 0;
+}
+
+summary:hover {
+    color: var(--accentred);
+
+}
+
 .homeTitle {
     margin: 0;
     padding: 25px 0;

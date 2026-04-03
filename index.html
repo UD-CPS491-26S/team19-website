@@ -140,13 +140,129 @@
         <div class="wideblock">
             <h2>Month 1</h2>
             <hr />
-            <p>Month 1 info content</p>
+            <h3>Planning and Research</h3>
+            <details>
+                <summary>[Click to show more]</summary>
+                <p>
+                    Over the first month of the project, our team focused primarily on planning, requirements
+                    clarification, environment research, and aligning our technical direction with the client. A major
+                    theme of this month was discovery and decision-making. Rather than immediately building, we
+                    intentionally invested time in
+                    evaluating options, understanding the client's current infrastructure, and establishing a
+                    sustainable development workflow. This foundation-setting phase has positioned us to move into
+                    implementation with clearer direction and fewer long-term risks.
+                </p>
+                <p>
+                    From a project management perspective, we established a consistent communication structure early on.
+                    We hold a weekly recurring meeting with the client every Wednesday at 1:30 PM. During these
+                    meetings, we discuss progress, clarify requirements, review deliverables, and identify next steps.
+                    The client requested recurring check-ins, which we supported because regular communication reduces
+                    misunderstandings and allows us to adapt quickly to feedback. After each client meeting, we hold an
+                    intra-team meeting to recap what was discussed and delegate tasks. This structure ensures
+                    accountability and keeps momentum moving forward. To manage tasks, we use GitHub Projects to track
+                    deliverables, document progress, and assign responsibilities.
+                </p>
+                <p>
+                    One of the most significant areas of discussion this month was the technology stack. There has been
+                    considerable back and forth with the client regarding infrastructure and platform choices. Rather
+                    than making unilateral decisions, we evaluated options collaboratively, particularly around CRM
+                    selection and hosting strategy. We analyzed multiple open-source CRM solutions and are most likely
+                    moving forward with Twenty CRM. The reasoning behind this choice includes alignment with the
+                    client's preference for open-source formatting and features, flexibility for future customization,
+                    developer-friendly architecture that suits our team's technical skill set, and long-term cost
+                    efficiency.
+                </p>
+                <p>
+                    Another major design decision involved cloud hosting. The client already uses WP Engine, and after
+                    evaluating alternatives, we are planning to use WP Engine for cloud hosting moving forward. The
+                    reasoning behind this decision includes the client already has an existing account and familiarity
+                    with the platform, avoiding unnecessary migration costs or onboarding friction, and reducing
+                    complexity in the integration between the CRM and their existing setup. At the same time, we are
+                    waiting for final confirmation from the client regarding the specific VPS configuration they would
+                    like to use, as cost considerations are still being evaluated.
+                </p>
+                <p>
+                    The primary challenge this month has been navigating the back-and-forth discussions regarding the
+                    tech stack. While this slowed immediate progress, it was a necessary step. Choosing infrastructure
+                    too quickly could have resulted in compatibility issues, cost inefficiencies, or misalignment with
+                    client expectations. We also learned the importance of clarifying hosting decisions early.
+                    Addressing these upfront has helped prevent technical debt. Additionally, we have reinforced the
+                    importance of structured communication. The recurring meeting cadence and clear task delegation have
+                    improved efficiency and reduced ambiguity.
+                </p>
+            </details>
         </div>
         <br />
         <div class="wideblock">
             <h2>Month 2</h2>
             <hr />
-            <p>Month 2 info content</p>
+            <h3>Infrastructure and Integration</h3>
+            <details>
+                <summary>[Click to show more]</summary>
+                <p>
+                    During Month 2, the team transitioned from planning into active development, which required
+                    validating earlier decisions through hands-on implementation. This shift pushed the team to think
+                    more critically about initial assumptions, troubleshoot unexpected issues, and refine its
+                    understanding of the client's operational needs. Early work on the data pipeline revealed that the
+                    client's datasets were far more inconsistent than expected. Several fields varied in structure,
+                    formatting was irregular, and many values required normalization before they could be imported into
+                    Twenty. These discoveries challenged the assumption that the data could be imported with minimal
+                    preprocessing. As the team developed the cleaning and import scripts, multiple approaches were
+                    evaluated, including the possibility of using a database intermediary. Ultimately, CSV was selected
+                    because it aligned with Twenty's native import capabilities and offered transparency for long-term
+                    client use. Separating the cleaning and importing into two scripts also proved to be a strategic
+                    decision because it reduced risk, improved maintainability, and allowed the client to re-run
+                    cleaning independently. Testing revealed additional edge cases, such as inconsistent phone number
+                    formats, reinforcing the importance of validating assumptions early and designing tools that remain
+                    flexible as the client's data evolves.
+                </p>
+                <p>
+                    Infrastructure and deployment work also required careful analysis. Although the client initially
+                    preferred WP Engine due to familiarity, deeper evaluation showed that WP Engine's limitations around
+                    containerization and custom services would restrict future development. As a result, the team
+                    selected a DigitalOcean VPS, which provided full control, predictable pricing, and compatibility
+                    with Docker Compose. Implementing Cloudflare and an NGINX reverse proxy strengthened the system's
+                    security and flexibility, especially as future integrations are anticipated. This decision-making
+                    process highlighted the importance of balancing client preferences with technical feasibility and
+                    long-term sustainability. While WP Engine seemed appealing at first, the team's analysis showed that
+                    it would introduce constraints that could slow development and limit customization.
+                </p>
+                <p>
+                    Integration work with Zapier required the most iterative problem solving this month. The team
+                    initially attempted to use Webhooks by Zapier to receive event data from Twenty, but the webhook was
+                    not receiving any payloads despite being configured correctly. This led the team to investigate both
+                    Twenty's outbound event system and Zapier's webhook handling to determine whether the issue was
+                    related to payload formatting, event triggers, or Zapier's endpoint configuration. After further
+                    testing, the team discovered that the issue was not with Zapier's authentication capabilities or the
+                    webhook setup, but with Cloudflare's security settings. Cloudflare was blocking Zapier's incoming
+                    requests and treating the traffic as suspicious, which prevented the webhook from receiving data.
+                    Once the DevOps configuration was adjusted to allow trusted API calls from Zapier, the connection
+                    was able to be established. After this adjustment, the team generated and configured a valid API key
+                    within Twenty, and Zapier successfully authenticated and received event payloads. This confirmed
+                    that the integration strategy was viable and demonstrated that the client's automation goals can be
+                    achieved without requiring a paid Twenty cloud subscription. Following this progress, the team began
+                    exploring QuickBooks and PandaSign integrations, analyzing authentication flows and API requirements
+                    to determine feasibility for future automation.
+                </p>
+                <p>
+                    Throughout the month, communication with the client remained consistent and structured. Weekly
+                    meetings allowed the team to validate assumptions early, clarify requirements, and ensure alignment
+                    on priorities. One key lesson reinforced during this period was the importance of documenting
+                    blockers clearly, especially for integration-related tasks, so the client understands progress even
+                    when outcomes are not immediate. This communication structure supports the professionalism and
+                    accountability expectations outlined in the course rubric and has helped maintain transparency and
+                    trust with the client.
+                </p>
+            </details>
+        </div>
+        <br />
+        <div class="wideblock">
+            <h2>Month 3</h2>
+            <hr />
+            <details>
+                <summary>[Click to show more]</summary>
+                <p>Month 3 info content</p>
+            </details>
         </div>
     </div>
     <br />
