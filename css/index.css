@@ -8,19 +8,41 @@
     --lightest: rgb(175, 175, 175);
     --light: rgb(100, 100, 100);
     --medium: rgb(50, 50, 50);
-    --darkesty: rgb(30, 30, 30);
     --deep: black;
     --accentblue: dodgerblue;
     --accentred: crimson;
 
-    --bluramount: 3px;
+    --bluramount: 2px;
 
     --borderthickness: 1px;
+    interpolate-size: allow-keywords;
+}
+
+@keyframes background-anim {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+html {
+    background-color: var(--deep);
+    scroll-behavior: smooth;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    position: relative;
+    background-image: radial-gradient(var(--lightest) 1px, var(--deep) 1px);
+    background-size: 40px 40px;
+    animation: background-anim 120s linear infinite;
 }
 
 h1 {
     margin: 50px 10% 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--lightest);
     font-size: 50px;
 }
@@ -60,7 +82,6 @@ summary:hover {
     /* border-bottom: var(--borderthickness) solid var(--lightest); */
     background-color: var(--deep);
     /* backdrop-filter: blur(var(--bluramount)); */
-    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 .homeTitle h1 {
@@ -83,7 +104,25 @@ summary:hover {
     text-align: center;
     color: var(--lightest);
     font-size: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    margin: 0 10%;
+}
+
+nav a {
     color: var(--lightest);
+    text-decoration: none;
+    font-size: 20px;
+    transition: .25s ease;
+}
+
+nav a:hover {
+    color: var(--accentred);
+    text-shadow: 0 0 10px var(--accentred);
 }
 
 .section {
@@ -100,6 +139,7 @@ summary:hover {
     width: 50%;
     margin: 0 10% 25px;
     clear: both;
+    overflow: hidden;
 }
 
 .card:nth-of-type(even) {
@@ -117,21 +157,29 @@ summary:hover {
     padding: 0 15px 15px;
 }
 
-.card:hover hr,
-.wideblock:hover hr {
+.card.active hr,
+.wideblock.active hr {
     background-color: var(--accentblue);
     box-shadow: 0 0 10px 0px var(--accentblue);
-
+    transition: .75s ease;
 }
 
-.card:hover,
-.wideblock:hover {
+.card.active,
+.wideblock.active {
     border-color: var(--accentblue);
     box-shadow: 0 0 10px 0px var(--accentblue);
+    transition: .75s ease;
 }
 
-.card img,
-.wideblock img {
+.cardbottom {
+    object-fit: cover;
+    width: 100%;
+    margin: 0;
+    float: inline-end;
+}
+
+.logo,
+.profilepicture {
     display: block;
     width: 200px;
     height: 200px;
@@ -159,4 +207,19 @@ summary:hover {
 .wideblock p {
     color: var(--lightest);
     padding: 0 15px 15px;
+}
+
+details::details-content {
+    overflow: hidden;
+    block-size: 0;
+    opacity: 0;
+    transition:
+        block-size .75s ease,
+        opacity .75s ease,
+        content-visibility .75s ease allow-discrete;
+}
+
+details[open]::details-content {
+    block-size: auto;
+    opacity: 1;
 }

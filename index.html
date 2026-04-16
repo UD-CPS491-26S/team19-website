@@ -5,7 +5,6 @@
     <title>Team 19 - Home</title>
     <meta charset="UTF-8">
 
-    <link href="css/shared.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
     <link rel="icon" href="assets/udayton.webp" />
 </head>
@@ -17,11 +16,17 @@
         <h3>Team 19 - <span style="color:dodgerblue; text-shadow: 0px 0px 5px dodgerblue">US Paper CRM</span></h3>
     </div>
     <br />
+    <nav>
+        <a href="#client">// Client</a>
+        <a href="#tech">// Technology</a>
+        <a href="#sprints">// Scrum</a>
+        <a href="#bios">// Team</a>
+    </nav>
     <br />
-    <div class="section" class="client">
+    <div class="section" id="client">
         <h1>Our Client</h1>
         <div class="wideblock">
-            <img src="assets/uspaper.png" alt="US Paper logo" onerror="this.src='assets/silhouette.png'">
+            <img class="logo" src="assets/uspaper.png" alt="US Paper logo" onerror="this.src='assets/silhouette.png'">
             <h2>US Paper Corporation</h2>
             <hr />
             <p>
@@ -42,15 +47,10 @@
         </div>
     </div>
     <br />
-    <div class="section" class="tech">
+    <div class="section" id="tech">
         <h1 style="text-align: right;">Our Technology</h1>
-        <!-- <div class="wideblock">
-            <h2>Tech Stack</h2>
-            <hr />
-            <p>Our technology information here</p>
-        </div> -->
         <div class="card">
-            <img src="assets/twenty.png" alt="Twenty logo" onerror="this.src='assets/silhouette.png'">
+            <img class="logo" src="assets/twenty.png" alt="Twenty logo" onerror="this.src='assets/silhouette.png'">
             <h2>Twenty CRM</h2>
             <hr>
             <p>
@@ -64,52 +64,70 @@
                 was an ideal candidate. Being able to integrate the CRM with outside tools, the ability to self-host,
                 and the sleek design made Twenty stand out as a modern solution to our task.
             </p>
+            <details>
+                <summary>[Click to show example]</summary>
+                <img class="cardbottom" src="assets/twenty-example.webp" alt="Twenty example">
+            </details>
         </div>
         <div class="card">
-            <img src="assets/docker.png" alt="Docker logo" style="object-fit: contain; border-radius: 0;"
+            <img class="logo" src="assets/docker.png" alt="Docker logo" style="object-fit: contain; border-radius: 0;"
                 onerror="this.src='assets/silhouette.png'">
             <h2>Docker</h2>
             <hr>
             <p>
-                Docker is an open-source platform used for developing, shipping, and running applications in isolated
-                environments called containers. It packages an application with all its dependencies, ensuring it runs
+                Docker is an open-source platform used for developing, shipping, and running applications in
+                isolated
+                environments called containers. It packages an application with all its dependencies, ensuring it
+                runs
                 consistently regardless of the underlying infrastructure.
             </p>
             <p>
                 By using Docker and Docker Compose to deploy Twenty, we are able to be sure that the CRM stays up to
                 date with the latest bug fixes as well as being easy to stand up on our VPS. After trying to install
-                Twenty from both the source files and from the Docker Compose, we found the process for deploying Twenty
+                Twenty from both the source files and from the Docker Compose, we found the process for deploying
+                Twenty
                 to be much more streamlined using Docker.
             </p>
         </div>
         <div class="card">
-            <img src="assets/digitalocean.png" alt="DigitalOcean logo" onerror="this.src='assets/silhouette.png'">
+            <img class="logo" src="assets/digitalocean.png" alt="DigitalOcean logo"
+                onerror="this.src='assets/silhouette.png'">
             <h2>DigitalOcean</h2>
             <hr>
             <p>
                 DigitalOcean is a prominent cloud infrastructure provider, widely known for its developer-friendly,
-                high-performance Virtual Private Servers (VPS), which the company brands as Droplets. Founded in 2012,
+                high-performance Virtual Private Servers (VPS), which the company brands as Droplets. Founded in
+                2012,
                 DigitalOcean specializes in providing simple, scalable, and affordable cloud hosting solutions for
                 startups, small-to-medium businesses (SMBs), and developers, offering both shared and dedicated CPU
                 options.
             </p>
             <p>
                 DigitalOcean provided a low-cost and reliable option for our VPS needs. We were able to choose the
-                specifications for the Droplet including the memory size, storage capacity, and base image. Our Droplet
-                uses an Ubuntu Linux image with Docker preinstalled. To access the Droplet, we are able use the Secure
-                Shell Protocol (SSH) to connect and the Secure Copy Protocol (SCP) to transfer files. After using SSH to
+                specifications for the Droplet including the memory size, storage capacity, and base image. Our
+                Droplet
+                uses an Ubuntu Linux image with Docker preinstalled. To access the Droplet, we are able use the
+                Secure
+                Shell Protocol (SSH) to connect and the Secure Copy Protocol (SCP) to transfer files. After using
+                SSH to
                 access the Droplet, we can install Twenty, Nginx, and more to build out the CRM for our client.
             </p>
+            <details>
+                <summary>[Click to show diagram]</summary>
+                <img class="cardbottom" src="assets/diagram.png" alt="DO diagram">
+            </details>
         </div>
         <div class="card">
-            <img src="assets/cloudflare.png" alt="Cloudflare logo" style="object-fit: contain; border-radius: 0;"
-                onerror="this.src='assets/silhouette.png'">
+            <img class="logo" src="assets/cloudflare.png" alt="Cloudflare logo"
+                style="object-fit: contain; border-radius: 0;" onerror="this.src='assets/silhouette.png'">
             <h2>Cloudflare</h2>
             <hr>
             <p>
-                Cloudflare DNS is a blazing-fast, secure, and authoritative DNS service designed for high performance
+                Cloudflare DNS is a blazing-fast, secure, and authoritative DNS service designed for high
+                performance
                 and reliability. It boasts one of the fastest propagation speeds in the industry, utilizing a global
-                Anycast network to reduce latency, combined with built-in DDoS protection, DNSSEC, and CNAME flattening.
+                Anycast network to reduce latency, combined with built-in DDoS protection, DNSSEC, and CNAME
+                flattening.
             </p>
             <p>
                 We decided to use Cloudflare to purchase a domain name and handle DNS due to its reliability and
@@ -118,24 +136,26 @@
             </p>
         </div>
         <div class="card">
-            <img src="assets/nginx.png" alt="NGINX logo" style="object-fit: contain; border-radius: 0;"
+            <img class="logo" src="assets/nginx.png" alt="NGINX logo" style="object-fit: contain; border-radius: 0;"
                 onerror="this.src='assets/silhouette.png'">
             <h2>NGINX</h2>
             <hr>
             <p>
                 Our NGINX reverse proxy acts as an intermediary server that sits in front of backend web servers,
                 intercepting client requests and forwarding them to the appropriate server. It then receives the
-                response from the backend server and delivers it to the client, abstracting the backend infrastructure
+                response from the backend server and delivers it to the client, abstracting the backend
+                infrastructure
                 from direct client access.
             </p>
             <p>
-                We also use certbot for generating certificates used for HTTPS, allowing our application to remain even
+                We also use certbot for generating certificates used for HTTPS, allowing our application to remain
+                even
                 more secure.
             </p>
         </div>
     </div>
     <br />
-    <div class="section" class="sprints">
+    <div class="section" id="sprints">
         <h1>Scrum</h1>
         <div class="wideblock">
             <h2>Month 1</h2>
@@ -145,7 +165,8 @@
                 <summary>[Click to show more]</summary>
                 <p>
                     Over the first month of the project, our team focused primarily on planning, requirements
-                    clarification, environment research, and aligning our technical direction with the client. A major
+                    clarification, environment research, and aligning our technical direction with the client. A
+                    major
                     theme of this month was discovery and decision-making. Rather than immediately building, we
                     intentionally invested time in
                     evaluating options, understanding the client's current infrastructure, and establishing a
@@ -153,41 +174,57 @@
                     implementation with clearer direction and fewer long-term risks.
                 </p>
                 <p>
-                    From a project management perspective, we established a consistent communication structure early on.
+                    From a project management perspective, we established a consistent communication structure early
+                    on.
                     We hold a weekly recurring meeting with the client every Wednesday at 1:30 PM. During these
-                    meetings, we discuss progress, clarify requirements, review deliverables, and identify next steps.
-                    The client requested recurring check-ins, which we supported because regular communication reduces
-                    misunderstandings and allows us to adapt quickly to feedback. After each client meeting, we hold an
+                    meetings, we discuss progress, clarify requirements, review deliverables, and identify next
+                    steps.
+                    The client requested recurring check-ins, which we supported because regular communication
+                    reduces
+                    misunderstandings and allows us to adapt quickly to feedback. After each client meeting, we hold
+                    an
                     intra-team meeting to recap what was discussed and delegate tasks. This structure ensures
-                    accountability and keeps momentum moving forward. To manage tasks, we use GitHub Projects to track
+                    accountability and keeps momentum moving forward. To manage tasks, we use GitHub Projects to
+                    track
                     deliverables, document progress, and assign responsibilities.
                 </p>
                 <p>
-                    One of the most significant areas of discussion this month was the technology stack. There has been
-                    considerable back and forth with the client regarding infrastructure and platform choices. Rather
+                    One of the most significant areas of discussion this month was the technology stack. There has
+                    been
+                    considerable back and forth with the client regarding infrastructure and platform choices.
+                    Rather
                     than making unilateral decisions, we evaluated options collaboratively, particularly around CRM
-                    selection and hosting strategy. We analyzed multiple open-source CRM solutions and are most likely
+                    selection and hosting strategy. We analyzed multiple open-source CRM solutions and are most
+                    likely
                     moving forward with Twenty CRM. The reasoning behind this choice includes alignment with the
-                    client's preference for open-source formatting and features, flexibility for future customization,
+                    client's preference for open-source formatting and features, flexibility for future
+                    customization,
                     developer-friendly architecture that suits our team's technical skill set, and long-term cost
                     efficiency.
                 </p>
                 <p>
-                    Another major design decision involved cloud hosting. The client already uses WP Engine, and after
+                    Another major design decision involved cloud hosting. The client already uses WP Engine, and
+                    after
                     evaluating alternatives, we are planning to use WP Engine for cloud hosting moving forward. The
-                    reasoning behind this decision includes the client already has an existing account and familiarity
+                    reasoning behind this decision includes the client already has an existing account and
+                    familiarity
                     with the platform, avoiding unnecessary migration costs or onboarding friction, and reducing
                     complexity in the integration between the CRM and their existing setup. At the same time, we are
-                    waiting for final confirmation from the client regarding the specific VPS configuration they would
+                    waiting for final confirmation from the client regarding the specific VPS configuration they
+                    would
                     like to use, as cost considerations are still being evaluated.
                 </p>
                 <p>
-                    The primary challenge this month has been navigating the back-and-forth discussions regarding the
-                    tech stack. While this slowed immediate progress, it was a necessary step. Choosing infrastructure
-                    too quickly could have resulted in compatibility issues, cost inefficiencies, or misalignment with
+                    The primary challenge this month has been navigating the back-and-forth discussions regarding
+                    the
+                    tech stack. While this slowed immediate progress, it was a necessary step. Choosing
+                    infrastructure
+                    too quickly could have resulted in compatibility issues, cost inefficiencies, or misalignment
+                    with
                     client expectations. We also learned the importance of clarifying hosting decisions early.
                     Addressing these upfront has helped prevent technical debt. Additionally, we have reinforced the
-                    importance of structured communication. The recurring meeting cadence and clear task delegation have
+                    importance of structured communication. The recurring meeting cadence and clear task delegation
+                    have
                     improved efficiency and reduced ambiguity.
                 </p>
             </details>
@@ -201,56 +238,81 @@
                 <summary>[Click to show more]</summary>
                 <p>
                     During Month 2, the team transitioned from planning into active development, which required
-                    validating earlier decisions through hands-on implementation. This shift pushed the team to think
+                    validating earlier decisions through hands-on implementation. This shift pushed the team to
+                    think
                     more critically about initial assumptions, troubleshoot unexpected issues, and refine its
-                    understanding of the client's operational needs. Early work on the data pipeline revealed that the
+                    understanding of the client's operational needs. Early work on the data pipeline revealed that
+                    the
                     client's datasets were far more inconsistent than expected. Several fields varied in structure,
-                    formatting was irregular, and many values required normalization before they could be imported into
+                    formatting was irregular, and many values required normalization before they could be imported
+                    into
                     Twenty. These discoveries challenged the assumption that the data could be imported with minimal
                     preprocessing. As the team developed the cleaning and import scripts, multiple approaches were
-                    evaluated, including the possibility of using a database intermediary. Ultimately, CSV was selected
-                    because it aligned with Twenty's native import capabilities and offered transparency for long-term
+                    evaluated, including the possibility of using a database intermediary. Ultimately, CSV was
+                    selected
+                    because it aligned with Twenty's native import capabilities and offered transparency for
+                    long-term
                     client use. Separating the cleaning and importing into two scripts also proved to be a strategic
                     decision because it reduced risk, improved maintainability, and allowed the client to re-run
-                    cleaning independently. Testing revealed additional edge cases, such as inconsistent phone number
-                    formats, reinforcing the importance of validating assumptions early and designing tools that remain
+                    cleaning independently. Testing revealed additional edge cases, such as inconsistent phone
+                    number
+                    formats, reinforcing the importance of validating assumptions early and designing tools that
+                    remain
                     flexible as the client's data evolves.
                 </p>
                 <p>
                     Infrastructure and deployment work also required careful analysis. Although the client initially
-                    preferred WP Engine due to familiarity, deeper evaluation showed that WP Engine's limitations around
+                    preferred WP Engine due to familiarity, deeper evaluation showed that WP Engine's limitations
+                    around
                     containerization and custom services would restrict future development. As a result, the team
                     selected a DigitalOcean VPS, which provided full control, predictable pricing, and compatibility
-                    with Docker Compose. Implementing Cloudflare and an NGINX reverse proxy strengthened the system's
-                    security and flexibility, especially as future integrations are anticipated. This decision-making
-                    process highlighted the importance of balancing client preferences with technical feasibility and
-                    long-term sustainability. While WP Engine seemed appealing at first, the team's analysis showed that
+                    with Docker Compose. Implementing Cloudflare and an NGINX reverse proxy strengthened the
+                    system's
+                    security and flexibility, especially as future integrations are anticipated. This
+                    decision-making
+                    process highlighted the importance of balancing client preferences with technical feasibility
+                    and
+                    long-term sustainability. While WP Engine seemed appealing at first, the team's analysis showed
+                    that
                     it would introduce constraints that could slow development and limit customization.
                 </p>
                 <p>
                     Integration work with Zapier required the most iterative problem solving this month. The team
-                    initially attempted to use Webhooks by Zapier to receive event data from Twenty, but the webhook was
-                    not receiving any payloads despite being configured correctly. This led the team to investigate both
+                    initially attempted to use Webhooks by Zapier to receive event data from Twenty, but the webhook
+                    was
+                    not receiving any payloads despite being configured correctly. This led the team to investigate
+                    both
                     Twenty's outbound event system and Zapier's webhook handling to determine whether the issue was
                     related to payload formatting, event triggers, or Zapier's endpoint configuration. After further
-                    testing, the team discovered that the issue was not with Zapier's authentication capabilities or the
-                    webhook setup, but with Cloudflare's security settings. Cloudflare was blocking Zapier's incoming
-                    requests and treating the traffic as suspicious, which prevented the webhook from receiving data.
-                    Once the DevOps configuration was adjusted to allow trusted API calls from Zapier, the connection
-                    was able to be established. After this adjustment, the team generated and configured a valid API key
+                    testing, the team discovered that the issue was not with Zapier's authentication capabilities or
+                    the
+                    webhook setup, but with Cloudflare's security settings. Cloudflare was blocking Zapier's
+                    incoming
+                    requests and treating the traffic as suspicious, which prevented the webhook from receiving
+                    data.
+                    Once the DevOps configuration was adjusted to allow trusted API calls from Zapier, the
+                    connection
+                    was able to be established. After this adjustment, the team generated and configured a valid API
+                    key
                     within Twenty, and Zapier successfully authenticated and received event payloads. This confirmed
-                    that the integration strategy was viable and demonstrated that the client's automation goals can be
-                    achieved without requiring a paid Twenty cloud subscription. Following this progress, the team began
-                    exploring QuickBooks and PandaSign integrations, analyzing authentication flows and API requirements
+                    that the integration strategy was viable and demonstrated that the client's automation goals can
+                    be
+                    achieved without requiring a paid Twenty cloud subscription. Following this progress, the team
+                    began
+                    exploring QuickBooks and PandaSign integrations, analyzing authentication flows and API
+                    requirements
                     to determine feasibility for future automation.
                 </p>
                 <p>
                     Throughout the month, communication with the client remained consistent and structured. Weekly
-                    meetings allowed the team to validate assumptions early, clarify requirements, and ensure alignment
+                    meetings allowed the team to validate assumptions early, clarify requirements, and ensure
+                    alignment
                     on priorities. One key lesson reinforced during this period was the importance of documenting
-                    blockers clearly, especially for integration-related tasks, so the client understands progress even
+                    blockers clearly, especially for integration-related tasks, so the client understands progress
+                    even
                     when outcomes are not immediate. This communication structure supports the professionalism and
-                    accountability expectations outlined in the course rubric and has helped maintain transparency and
+                    accountability expectations outlined in the course rubric and has helped maintain transparency
+                    and
                     trust with the client.
                 </p>
             </details>
@@ -266,26 +328,31 @@
         </div>
     </div>
     <br />
-    <div class="section" class="bios">
+    <div class="section" id="bios">
         <h1 style="text-align: right;">About Us</h1>
         <div class="card">
-            <img src="assets/Trinity.jpg" alt="Trinity" onerror="this.src='assets/silhouette.png'">
+            <img class="profilepicture" src="assets/Trinity.jpg" alt="Trinity"
+                onerror="this.src='assets/silhouette.png'">
             <h2>Trinity Beltz</h2>
             <hr />
             <p>
                 I am a Computer Science student at the University of Dayton with a concentration in Cyber Defense.
                 I find cybersecurity and secure systems particularly interesting, especially in environments where
                 reliability and security are critical. I also have experience working with Position, Navigation, and
-                Timing (PNT) operating systems used on military aircraft, as well as working with sensor technologies.
+                Timing (PNT) operating systems used on military aircraft, as well as working with sensor
+                technologies.
             </p>
             <p>
-                Through my coursework and hands-on experience, I have developed skills in programming, networking, and
-                security principles that help support secure and dependable systems. This capstone project allows me to
+                Through my coursework and hands-on experience, I have developed skills in programming, networking,
+                and
+                security principles that help support secure and dependable systems. This capstone project allows me
+                to
                 apply what I have learned while exploring real-world challenges in computing and cybersecurity.
             </p>
         </div>
         <div class="card">
-            <img src="assets/thomas.jpeg" alt="Thomas" onerror="this.src='assets/silhouette.png'">
+            <img class="profilepicture" src="assets/thomas.jpeg" alt="Thomas"
+                onerror="this.src='assets/silhouette.png'">
             <h2>Thomas McGinley</h2>
             <h3>Computer Science '26</h3>
             <hr />
@@ -295,18 +362,22 @@
                 platforms, working with several Kubernetes distributions and open-source applications.
             </p>
             <p>
-                I rise to the challenge of being a full-time student, a dedicated employee, and a loving father all at
-                the same time. Balancing these responsibilities has been the most rewarding experience thus far in my
+                I rise to the challenge of being a full-time student, a dedicated employee, and a loving father all
+                at
+                the same time. Balancing these responsibilities has been the most rewarding experience thus far in
+                my
                 life.
             </p>
         </div>
         <div class="card">
-            <img src="assets/abigail.jpg" alt="Abigail" onerror="this.src='assets/silhouette.png'">
+            <img class="profilepicture" src="assets/abigail.jpg" alt="Abigail"
+                onerror="this.src='assets/silhouette.png'">
             <h2>Abigail O'Rourke</h2>
             <h3>Computer Science '26</h3>
             <hr />
             <p>
-                I'm an undergraduate student at the University of Dayton studying computer science. I enjoy programming
+                I'm an undergraduate student at the University of Dayton studying computer science. I enjoy
+                programming
                 and
                 specialize in Java and Python. I have had the opportunity to work on several company-based projects
                 through
@@ -316,4 +387,29 @@
         </div>
     </div>
 
+
+    <script>
+        const elements = document.querySelectorAll('.wideblock, .card');
+
+        function checkCenter() {
+            const viewportHeight = window.innerHeight;
+            const centerTop = viewportHeight * 0.2;
+            const centerBottom = viewportHeight * 0.8;
+
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const elementCenter = rect.top + rect.height / 2;
+
+                if (elementCenter >= centerTop && elementCenter <= centerBottom) {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkCenter);
+        window.addEventListener('resize', checkCenter);
+        checkCenter();
+    </script>
 </body>
