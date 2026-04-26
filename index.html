@@ -321,9 +321,50 @@
         <div class="wideblock">
             <h2>Month 3</h2>
             <hr />
+            <h3>Finalization and Continuity</h3>
             <details>
                 <summary>[Click to show more]</summary>
-                <p>Month 3 info content</p>
+                <p>
+                    During month 3, the team focused their efforts on refining the user experience, automating
+                    processes, and documenting systems.
+                </p>
+                <p>
+                    During our time working on the project, Twenty underwent several upgrades from the development team.
+                    We made it a point to bring Twenty up to the latest stable version prior to delivery of the final
+                    product. By upgrading Twenty as new releases came out, the product was consistently using the
+                    cutting edge features. Though a new major version of Twenty came out during this development period,
+                    it was decided that this upgrade would be risky to do last minute as our developed systems could
+                    function differently than expected. Work was done to ensure that upgrade procedure was well
+                    documented, allowing our client to perform the upgrade if desired.
+                </p>
+                <p>
+                    This development period also saw the import of some real client data into Twenty. By testing our
+                    ingest scripts, we were able to confirm that the scripts would run as desired as well as ensuring
+                    that the VPS could take the load of large data imports. After importing the data into the CRM, we
+                    observed a significant drop in performance from the VPS. Following this observation, it was
+                    determined that an upgrade to the VPS infrastructure was necessary. The VPS was subsequently scaled
+                    up to 2 CPUs and 4 GB of memory, doubling the previous allocation in both. The VPS stabilized and
+                    ran Twenty with significant improvement.
+                </p>
+                <p>
+                    Automation of systems was a major requirement for the product. The client requested minimum future
+                    maintenance from the product, so several manual processes were made automatic through the use of
+                    cron jobs and shell scripts installed on the VPS. A shell script was made to shorthand the creation
+                    of a backup image of the Twenty databases. This script was installed as a cron job that would run
+                    daily at 1:00 a.m. local time. A second shell script to remove backups 15 days in the past was also
+                    installed as a cron job. The scripts would work over time to create a set of backups for two weeks
+                    prior to the day ensuring that there were plenty of redundant images, yet keeping the images recent
+                    and at a fixed number. Another shell script was created to restore the databases from the latest
+                    backup or one made on a given date. One of the trickiest procedures is restarting the Docker
+                    containers that run Twenty. A script was developed to create a backup of the databases, then restart
+                    the containers automatically.
+                </p>
+                <p>
+                    Continuity was important for both us and the client. We wanted to make sure that we could hand off
+                    the product with instructions for how to use the various systems we developed. We made it a point to
+                    each develop documentation regarding the systems that we worked on individually to make sure they
+                    were documented well.
+                </p>
             </details>
         </div>
     </div>
@@ -334,6 +375,8 @@
             <img class="profilepicture" src="assets/Trinity.jpg" alt="Trinity"
                 onerror="this.src='assets/silhouette.png'">
             <h2>Trinity Beltz</h2>
+            <h3>Research and Development</h3>
+            <a class="linkedin" href="https://www.linkedin.com/in/trinity-beltz/">LinkedIn</a>
             <hr />
             <p>
                 I am a Computer Science student at the University of Dayton with a concentration in Cyber Defense.
@@ -354,7 +397,8 @@
             <img class="profilepicture" src="assets/thomas.jpeg" alt="Thomas"
                 onerror="this.src='assets/silhouette.png'">
             <h2>Thomas McGinley</h2>
-            <h3>Computer Science '26</h3>
+            <h3>Infrastructure and DevOps</h3>
+            <a class="linkedin" href="https://www.linkedin.com/in/thomas-j-mcginley/">LinkedIn</a>
             <hr />
             <p>
                 I'm a University of Dayton student studying computer science. I am proficient in several programming
@@ -373,7 +417,8 @@
             <img class="profilepicture" src="assets/abigail.jpg" alt="Abigail"
                 onerror="this.src='assets/silhouette.png'">
             <h2>Abigail O'Rourke</h2>
-            <h3>Computer Science '26</h3>
+            <h3>Data and Visualization</h3>
+            <a class="linkedin" href="https://www.linkedin.com/in/abigail-orourke/">LinkedIn</a>
             <hr />
             <p>
                 I'm an undergraduate student at the University of Dayton studying computer science. I enjoy
